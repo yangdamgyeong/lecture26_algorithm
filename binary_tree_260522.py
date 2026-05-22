@@ -18,30 +18,31 @@ def make_tree():
     }
 
 # 전위 순회(dict)
-def preorder(make_tree):
-    if make_tree == None: return
+def preorder(node):
+    if node == None: return
 
-    print(make_tree, end=' ')
-    preorder(tree[make_tree][0])
-    preorder(tree[make_tree][1])
+    print(node, end=' ')
+    preorder(tree[node][0])
+    preorder(tree[node][1])
 
 
 # 후위순회
-def postorder(make_tree):
-    if make_tree == None: return
+def postorder(node):
+    if node == None: return
 
-    postorder(tree[make_tree][0])
-    postorder(tree[make_tree][1])
-    print(make_tree, end=' ')
+    postorder(tree[node][0])
+    postorder(tree[node][1])
+    print(node, end=' ')
 
 
 # 중위순회
-def inorder(make_tree):
-    if make_tree == None: return
+def inorder(node):
+    if node == None: return
 
-    inorder(tree[make_tree][0])
-    print(make_tree, end=' ')
-    inorder(tree[make_tree][1])
+    inorder(tree[node][0])
+    print(node, end=' ')
+    inorder(tree[node][1])
+
 
 preorder('A')
 print()
