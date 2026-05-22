@@ -8,14 +8,12 @@ tree['F'] = [None, 'G']
 tree['G'] = [None, None]
 
 def make_tree():
-    {'A': ['B','C'],
-    'B': ['D',None],
-    'C': ['E', 'F'],
-    'D': [None, None],
-    'E': [None, None],
-    'F': [None, 'G'],
-    'G': [None, None]
-    }
+    global tree
+    tree = {}
+
+    for _ in range(tree):
+        data, left, right = input("노드를 입력하세요 : ").split()
+        tree[data] = [left, right]
 
 # 전위 순회(dict)
 def preorder(node):
